@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/25 15:17:56 by mignacio          #+#    #+#             */
+/*   Updated: 2025/01/25 15:18:38 by mignacio         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -11,23 +22,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str_ptr[i] == (unsigned char) c)
-			return ((unsigned char *)&str_ptr[i]);
+			return ((void *)&str_ptr[i]);
 		i++;
 	}
-	if (c == '\0')
-		return	((unsigned char *)&str_ptr[i]);
 	return (NULL);
-}
-
-int main(void)
-{
-	const unsigned char	*s;
-	size_t	n = 6;
-	size_t	i = 0;
-	while (i < n)
-	{
-		printf("%c", s[i]);
-		i++;
-	}
-	
 }
