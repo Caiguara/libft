@@ -6,13 +6,11 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:42:40 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/22 13:46:44 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/01/25 16:20:32 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <limits.h>
 
 int	ft_isspace(char c)
