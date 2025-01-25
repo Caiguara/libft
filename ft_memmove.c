@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/25 15:32:02 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/25 16:27:52 by mignacio         ###   ########.fr       */
+/*   Created: 2025/01/25 17:11:24 by mignacio          #+#    #+#             */
+/*   Updated: 2025/01/25 17:56:08 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	const unsigned char	*s1_ptr;
-	const unsigned char	*s2_ptr;
-	size_t				i;
+	unsigned char			*dest_ptr;
+	const unsigned char		*src_ptr;
 
-	s1_ptr = (const unsigned char *) s1;
-	s2_ptr = (const unsigned char *) s2;
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n)
+	dest_ptr = (unsigned char *) dest;
+	src_ptr = (const unsigned char *) src;
+	if (dest_ptr == src_ptr)
+		return (dest);
+	if (dest_ptr > src_ptr && dest_ptr < src_ptr + n)
 	{
-		if (s1_ptr[i] != s2_ptr[i])
-			return (s1_ptr[i] - s2_ptr[i]);
-		i++;
+		while (n > 0)
+		{
+			n--;
+			dest_ptr[n] = src_ptr[n];
+		}
 	}
-	return (0);
+	else
+		return (ft_memcpy(dest, src, n));
+	return (dest);
 }
