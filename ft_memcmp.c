@@ -6,7 +6,7 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 15:32:02 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/25 16:25:56 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/01/25 16:26:28 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (s1_ptr[i] != s2_ptr[i])
-		{
 			return (s1_ptr[i] - s2_ptr[i]);
-		}
 		i++;
 	}
 	return (0);
