@@ -1,41 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/27 16:22:15 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/27 16:22:16 by mignacio         ###   ########.fr       */
+/*   Created: 2025/01/27 16:12:46 by mignacio          #+#    #+#             */
+/*   Updated: 2025/01/27 16:21:57 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <unistd.h>
 
-char	*ft_strtrim(char *s1, char const *set)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-	size_t	j;
-
-	if (!s1 || !set)
-		return (NULL);
-	while (s1[i] != '\0')
-	{
-		i = 0;
-		while (set[j] != '\0')
-		{
-			j = 0;
-			if (s1[i + j] == set[j])
-				s1[i + j] = 'z';
-			j++;
-		}
-		i++;
-	}
-	return (s1);
-}
-
-int	main(void)
-{
-	printf("%s\n", ft_strtrim("abcdefghijklm", "fka"));
+	write(fd, &c, 1);
 }
