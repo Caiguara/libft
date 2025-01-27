@@ -6,7 +6,7 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:51:14 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/27 19:24:16 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/01/27 19:24:59 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 	if (n >= 0 && n <= 9)
-	{
 		ft_putchar_fd(n + '0', fd);
-	}
 }
