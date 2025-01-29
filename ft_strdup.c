@@ -6,12 +6,12 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 12:20:09 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/27 12:21:01 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:18:40 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 char	*strdup(const char *s)
 {

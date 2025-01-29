@@ -6,36 +6,48 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:22:15 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/27 16:22:16 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:20:36 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
+
+static int	is_in_set(char c, const char *set)
+{
+	while (*set)
+	{
+		if (c == *set)
+			return (1);
+		set++;
+	}
+	return (0);
+}
 
 char	*ft_strtrim(char *s1, char const *set)
 {
 	size_t	i;
-	size_t	j;
+	size_t	end;
+	size_t	start;
+	char	*trimmed;
 
 	if (!s1 || !set)
 		return (NULL);
-	while (s1[i] != '\0')
+	start = 0;
+	while (s1[start] && is_in_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && is_in_set(s1[end - 1], set))
+		end--;
+	trimmed = (char *) malloc((end - start + 1) * sizeof(char));
+	if (trimmed == NULL)
+		return (NULL);
+	i = 0;
+	while (end > start)
 	{
-		i = 0;
-		while (set[j] != '\0')
-		{
-			j = 0;
-			if (s1[i + j] == set[j])
-				s1[i + j] = 'z';
-			j++;
-		}
+		trimmed[i] = s1[start];
 		i++;
+		start++;
 	}
-	return (s1);
-}
-
-int	main(void)
-{
-	printf("%s\n", ft_strtrim("abcdefghijklm", "fka"));
+	return (trimmed);
 }
