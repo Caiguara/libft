@@ -6,12 +6,12 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:57:50 by mignacio          #+#    #+#             */
-/*   Updated: 2025/02/01 16:34:29 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/01 20:11:53 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 static int	length(int n)
 {
@@ -19,7 +19,7 @@ static int	length(int n)
 
 	len = 0;
 	if (n == 0)
-		return(1);
+		return (1);
 	if (n == -2147483648)
 		return (11);
 	if (n < 0)
@@ -35,11 +35,11 @@ static int	length(int n)
 	return (len);
 }
 
-static int is_negative(int *n, char *str)
+static int	is_negative(int *n, char *str)
 {
 	if (*n < 0)
 	{
-		if(*n == -2147483648)
+		if (*n == -2147483648)
 		{
 			str[0] = '-';
 			str[1] = '2';
@@ -53,10 +53,11 @@ static int is_negative(int *n, char *str)
 	}
 	return (*n);
 }
+
 char	*ft_itoa(int n)
 {
-	char *str;
-	int	len;
+	char	*str;
+	int		len;
 
 	len = length(n);
 	str = (char *) malloc((len + 1) * sizeof(char));
@@ -72,12 +73,6 @@ char	*ft_itoa(int n)
 		str[len] = '0' + (n % 10);
 		n /= 10;
 		len--;
-	}	
-	return (str);	
-}
-
-int	main(void)
-{
-	printf("%s\n", ft_itoa(-2147483648));
-	return (0);
+	}
+	return (str);
 }
