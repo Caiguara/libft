@@ -6,7 +6,7 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:57:49 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/31 21:01:29 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/01 17:56:58 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,7 @@ static char	**result(char const *s, char c, char **arr)
 char	**ft_split(char const *s, char c)
 {
 	char	**splitted;
-	size_t	i;
 
-	i = 0;
 	if (!s)
 		return (NULL);
 	splitted = (char **) malloc ((howmany_words(c, s) + 1) * sizeof(char *));
