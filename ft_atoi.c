@@ -6,14 +6,14 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:42:40 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/25 16:20:32 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/02 17:00:51 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <limits.h>
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	return ((c >= 9 && c <= 13) || (c == ' '));
 }

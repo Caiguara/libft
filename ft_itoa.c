@@ -6,12 +6,13 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:57:50 by mignacio          #+#    #+#             */
-/*   Updated: 2025/02/01 20:11:53 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/02 16:49:06 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <limits.h>
 
 static int	length(int n)
 {
@@ -20,7 +21,7 @@ static int	length(int n)
 	len = 0;
 	if (n == 0)
 		return (1);
-	if (n == -2147483648)
+	if (n == INT_MIN)
 		return (11);
 	if (n < 0)
 	{
@@ -39,7 +40,7 @@ static int	is_negative(int *n, char *str)
 {
 	if (*n < 0)
 	{
-		if (*n == -2147483648)
+		if (*n == INT_MIN)
 		{
 			str[0] = '-';
 			str[1] = '2';
