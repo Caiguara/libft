@@ -6,12 +6,11 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:57:49 by mignacio          #+#    #+#             */
-/*   Updated: 2025/02/01 17:56:58 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/04 16:49:14 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static size_t	howmany_words(char c, const char *s)
 {

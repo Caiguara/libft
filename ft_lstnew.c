@@ -6,12 +6,11 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 19:47:06 by mignacio          #+#    #+#             */
-/*   Updated: 2025/02/03 14:01:24 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/04 16:48:45 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {
