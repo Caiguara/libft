@@ -6,12 +6,11 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:42:40 by mignacio          #+#    #+#             */
-/*   Updated: 2025/02/04 16:48:15 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/06 21:07:49 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 static int	ft_isspace(char c)
 {
