@@ -6,7 +6,7 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 13:41:12 by mignacio          #+#    #+#             */
-/*   Updated: 2025/02/04 17:11:47 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/04 18:55:44 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int		ft_isprint(int c);
 char	*ft_itoa(int n);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
