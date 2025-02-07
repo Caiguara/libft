@@ -6,7 +6,7 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 20:26:01 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/25 20:26:35 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/07 16:49:06 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	total;
-	void	*s;
+	size_t			total;
+	unsigned char	*s;
+	size_t			i;
 
-	if (nmemb == 0 || size == 0)
-		return (NULL);
+	i = 0;
 	total = nmemb * size;
 	s = malloc(total);
 	if (s == NULL)
 		return (NULL);
-	ft_memset(s, 0, total);
+	while (i < total)
+	{
+		s[i] = 0;
+		i++;
+	}
 	return (s);
 }
