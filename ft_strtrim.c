@@ -6,7 +6,7 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:22:15 by mignacio          #+#    #+#             */
-/*   Updated: 2025/02/04 16:49:38 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/07 17:04:58 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char	*ft_strtrim(char *s1, char const *set)
 		i++;
 		start++;
 	}
+	trimmed[i] = '\0';
 	return (trimmed);
 }
