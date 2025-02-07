@@ -6,7 +6,7 @@
 /*   By: mignacio <mignacio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 15:35:13 by mignacio          #+#    #+#             */
-/*   Updated: 2025/01/22 15:35:29 by mignacio         ###   ########.fr       */
+/*   Updated: 2025/02/07 15:27:07 by mignacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
 	while (*s)
 	{
 		if (*s == (char) c)
